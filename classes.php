@@ -202,6 +202,9 @@ class clsApicall
                     $this->response_base64 = $obj->{'response_base64'};
 
                 }
+		    
+                // In case of no response in repository found
+                if ($this->fileexists==false) $this->response_base64 = base64_encode('{"message":"No response in repository"}');
 
             }
             
