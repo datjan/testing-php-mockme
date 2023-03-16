@@ -138,6 +138,7 @@ class clsApicall
     var $request_base64 = "";
     var $headers_base64 = "";
     var $url_base64 = "";
+    var $fileexists = false;
     var $isanswered = "0";
     var $response_base64 = "";
     var $errormessage = "";
@@ -186,6 +187,8 @@ class clsApicall
                     $obj = json_decode($contents);
                     // Fill 
                     $this->filename = $file;
+			
+		    $this->fileexists = true;
 
                     $this->unixtimestamp_added = $file_array['0'];
                     $this->guid = $file_array['1'];
