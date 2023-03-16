@@ -41,7 +41,7 @@ foreach($myView->apicalls as $apicall)
 														<p>'.base64_decode($apicall['headers_base64']).'</p>
 													</details>';
 				else  echo $apicall['id'].' - waiting for Incoming Request';
-		echo '</span><br>
+		echo '</span>
 		  </div>
 	
 		  <div id="element_apicall_'.$apicall['id'].'_wrapper" class="div_list_apicall_wrapper">
