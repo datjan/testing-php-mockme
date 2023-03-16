@@ -18,7 +18,7 @@ require_once('classes.php');
 		
         <title>MockMe</title>
 		
-		<link rel="icon" href="img/logo/icon_80_x_80.png">
+		<!-- <link rel="icon" href="img/logo/icon_80_x_80.png"> -->
 		
         <link rel="stylesheet" href="style.css?v1" type="text/css" media="screen" />
 
@@ -34,6 +34,13 @@ require_once('classes.php');
 
 		<script type="text/javascript">
 			
+			function reload_repository_continuously() {
+				setInterval("reload_repository_if_checked();", 5000); 
+			}
+
+			function reload_repository_if_checked() {
+				if (document.getElementById('auto_refresh_repository').checked) refresh_repository();
+			}
 
 			function generateParamsFromClass(classident) {
 				// Prepare Parameter
@@ -115,7 +122,7 @@ require_once('classes.php');
 
     </head>
 
-    <body>
+    <body onload="reload_repository_continuously();">
 
                      
 <div class="content">
@@ -125,7 +132,7 @@ require_once('classes.php');
 <?php 
 
 
-
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 // Response Repository Add Mask
 echo '<div id="element_apicall_header" class="div_list_apicall_header">
@@ -147,6 +154,10 @@ echo '<div id="element_apicall_header" class="div_list_apicall_header">
 			</td>
 		</tr>
 		</table>
+		<br>
+		<span class="small_gray"><input type="checkbox" id="auto_refresh_repository" name="auto_refresh_repository" class="form_checkbox" value="Auto refresh"> repository auto refresh every 5 seconds</span>
+		<br>
+		<span class="small_gray">--> Now fill the repository and send a request to <a href="'.$actual_link.'api.php">'.$actual_link.'api.php</a></span>
 	  </div>';
 
 // Response Repository List
