@@ -77,7 +77,6 @@ class clsView
 {
 	// Init Parameter
     var $data_verz = "";
-	var $dbcon = null; // Database Connection
 
     // Views
     var $apicalls = array();
@@ -85,11 +84,10 @@ class clsView
 
     var $errormessage = "";
 
-    function __construct($data_verz,$dbcon)
+    function __construct($data_verz)
     {
 		// Init Parameter
         $this->data_verz = $data_verz;
-		$this->dbcon = $dbcon;
 	
     }
 
