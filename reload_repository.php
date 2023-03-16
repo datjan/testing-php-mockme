@@ -24,7 +24,7 @@ if (isset($_GET['clear']))
 
 
 // Response Repository List
-$myView = NEW clsView($verzeichnis_data,$dbcon);
+$myView = NEW clsView($verzeichnis_data);
 $myView->getApicalls();
 
 foreach($myView->apicalls as $apicall)
