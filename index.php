@@ -20,7 +20,7 @@ require_once('classes.php');
 		
 		<link rel="icon" href="img/logo/icon_80_x_80.png">
 		
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="style.css?v1" type="text/css" media="screen" />
 
 		
 
