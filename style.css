@@ -169,3 +169,19 @@ strong
 	border-radius:5px;
 	cursor: pointer;
 }
+
+.form_checkbox
+{
+        height:15px;
+        width:15px;
+	line-height:15px;
+	background-color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-size:14px;
+	margin-top:5px;
+        margin-left:10px;
+	margin-bottom:5px;
+        border: 1px solid #a6a6a6;
+	border-radius:5px;
+	cursor: pointer;
+}
