@@ -238,7 +238,7 @@ class clsApicall
             $this->errormessage =  "getNext failed: ".$e->getMessage();
         }
 
-        return $this->response;
+        return $this->response_base64;
     }
 
     function add($response)
