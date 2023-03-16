@@ -49,8 +49,8 @@ $myApicall->headers_base64 = base64_encode($headers);
 $myApicall->url_base64 = base64_encode($url);
 $myApicall->isanswered = "1";
 
-// Update Apicall
-$myApicall->update();
+// Update Apicall if exists
+if ($myApicall->fileexists==true) $myApicall->update();
 
 // Echo Response
 print base64_decode($myApicall->response_base64);
